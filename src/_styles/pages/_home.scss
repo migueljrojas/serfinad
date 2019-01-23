@@ -1,3 +1,409 @@
 .home {
-    
+
+    &__hero {
+        background: url("/images/hero.jpg") no-repeat center center / cover;
+        height: 100vh;
+        position: relative;
+        overflow: hidden;
+    }
+
+    &__content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate3d(-50%, -50%, 0);
+    }
+
+    &__title {
+        margin-top: 0;
+        color: $white;
+        text-align: center;
+        font-family: $titleFont;
+        font-weight: 700;
+        margin-bottom: 40px;
+        width: 90vw;
+
+        @include mq(sm) {
+            width: auto;
+            margin-bottom: 4vw;
+            font-size: 4vw;
+
+        }
+    }
+
+    &__button {
+        background: $white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 12px 0;
+        width: 50%;
+
+        @include mq(sm) {
+            width: 30%;
+            padding: 1.2vw 0;
+
+        }
+
+        a {
+            color: $mainColor;
+            font-weight: 700;
+        }
+    }
+
+    &__interstitial {
+        background: $lightGray;
+
+        &__container {
+            display: flex;
+            flex-direction: column;
+
+            @include mq(sm) {
+                margin-left: 10%;
+                width: 90%;
+                flex-direction: row;
+            }
+        }
+
+        &__wrapper {
+            padding: 50px 30px;
+
+            @include mq(sm) {
+                padding: 5vw 0;
+                width: 50%;
+
+            }
+        }
+
+        &__text {
+            line-height: 2;
+            margin: 0;
+            font-size: 12px;
+
+            @include mq(sm) {
+                font-size: 2.5vmin;
+            }
+        }
+
+        &__images {
+            position: relative;
+            overflow: hidden;
+            height: 40vh;
+
+            @include mq(sm) {
+                width: 50%;
+                height: auto;
+            }
+        }
+
+        &__image {
+            position: absolute;
+
+            &--logo {
+                top: 0;
+                left: 0;
+
+                @include mq(sm) {
+                    left: 5%;
+                }
+            }
+
+            &--girl {
+                left: 50%;
+                transform: translateX(-50%);
+                top: 0;
+
+                @include mq(sm) {
+                    top: -5%;
+                }
+            }
+        }
+    }
+
+    &__servicios {
+        padding: 10vh 0;
+
+        &__title {
+            color: $mainColor;
+            font-family: $titleFont;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 5vh;
+            padding-bottom: 5vh;
+            position: relative;
+            margin-top: 0;
+            font-size: 32px;
+
+            @include mq(sm) {
+                font-size: 4vw;
+            }
+
+            &:after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                height: 3px;
+                background: $midGray;
+                width: 20%;
+
+                @include mq(sm) {
+                    width: 8%;
+                }
+            }
+        }
+
+        &__wrapper {
+            border-top: 1px solid $lightGray;
+            border-bottom: 1px solid $lightGray;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        &__cell {
+            display: flex;
+            align-items: flex-start;
+            padding-top: 20px;
+            padding-bottom: 20px;
+
+            @include mq(sm) {
+                padding-top: 4vw;
+                padding-bottom: 4vw;
+                width: 50%;
+            }
+
+            &:nth-child(1) {
+                order: 1;
+                border-bottom: 1px solid $lightGray;
+
+                @include mq(sm) {
+                    border-right: 1px solid $lightGray;
+                }
+            }
+            &:nth-child(2) {
+                order: 2;
+                border-bottom: 1px solid $lightGray;
+
+                @include mq(sm) {
+                    border-bottom: none;
+                }
+            }
+
+            &:nth-child(3) {
+                order: 4;
+                border-bottom: 1px solid $lightGray;
+
+                @include mq(sm) {
+                    order: 3;
+                    border-bottom: none;
+                }
+            }
+
+            &:nth-child(4) {
+                order: 3;
+                border-bottom: 1px solid $lightGray;
+
+                @include mq(sm) {
+                    border-bottom: none;
+                    border-top: 1px solid $lightGray;
+                    border-left: 1px solid $lightGray;
+                    order: 4;
+                }
+            }
+
+            &:nth-child(1),
+            &:nth-child(3) {
+                justify-content: center;
+
+                @include mq(sm) {
+                    justify-content: flex-end;
+                    padding-right: 6vw;
+                }
+            }
+
+            &:nth-child(2),
+            &:nth-child(4) {
+                justify-content: center;
+
+                @include mq(sm) {
+                    justify-content: flex-start;
+                    padding-left: 6vw;
+                }
+            }
+        }
+
+        &__group {
+            text-align: center;
+            width: 80%;
+
+            @include mq(sm) {
+                width: 50%;
+
+            }
+        }
+
+        &__cell-number {
+            font-family: $titleFont;
+            color: $white;
+            font-weight: 700;
+            text-shadow: -1px 0 $indigo, 0 1px $indigo, 1px 0 $indigo, 0 -1px $indigo;
+            font-size: 32px;
+
+            @include mq(sm) {
+                font-size: 3vw;
+            }
+        }
+
+        &__cell-title {
+            color: $indigo;
+            font-weight: 700;
+            font-family: $titleFont;
+            margin-bottom: 1vw;
+        }
+
+        &__cell-text {
+            color: $indigo;
+            margin-bottom: 20px;
+
+            @include mq(sm) {
+                margin-bottom: 2vw;
+            }
+        }
+
+        &__cell-button {
+            background: $indigo;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 12px 0;
+            color: $white;
+            font-weight: 700;
+            width: 50%;
+
+            @include mq(sm) {
+                padding: .8vw 0;
+            }
+        }
+    }
+
+    &__contacto {
+        margin-bottom: 10vh;
+
+        &__wrapper {
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            flex-direction: column;
+
+            @include mq(sm) {
+                justify-content: space-between;
+                flex-direction: row;
+            }
+        }
+
+        &__column {
+
+            @include mq(sm) {
+                height: 42vh;
+                width: 48.5%;
+            }
+
+            &--left {
+                margin-bottom: 20px;
+
+                @include mq(sm) {
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        &__map {
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 20px;
+            height: 40vh;
+
+            @include mq(sm) {
+                height: 73%;
+                margin-bottom: 1.5vw;
+            }
+
+            iframe {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+            }
+        }
+
+        &__title {
+            color: $indigo;
+            font-weight: 700;
+            margin-bottom: 15px;
+            font-size: 16px;
+
+            @include mq(sm) {
+                font-size: 1.3vw;
+                margin-bottom: 1.5vw;
+            }
+        }
+
+        &__text {
+            margin: 0;
+            color: $indigo;
+            font-size: 14px;
+        }
+
+        &__form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &__input {
+            color: $indigo + #333;
+            background: $indigo + #999;
+            border: none;
+            outline: none;
+            margin-bottom: 20px;
+            padding: 15px 20px;
+
+            @include mq(sm) {
+                padding: 1.5vw 2vw;
+                margin-bottom: 1.5vw;
+            }
+
+            &--textarea {
+                height: 25vh;
+            }
+        }
+
+        &__button {
+            background: $indigo;
+            color: $white;
+            border: none;
+            border-radius: 50px;
+            width: 50%;
+            padding: 10px 0;
+            margin-left: auto;
+            margin-right: auto;
+
+            @include mq(sm) {
+                margin-left: 0;
+                margin-right: 0;
+                padding: 1vw 0;
+                width: 25%;
+
+            }
+        }
+    }
 }

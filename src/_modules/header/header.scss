@@ -2,17 +2,146 @@
 
     $h: &;
 
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: transparent;
+    z-index: 1000;
+
+    &.sticky {
+        background: $indigo;
+    }
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        height: 10vh;
+    }
+
+    &__wrapper {
+        height: 15vh;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+
+        @include mq(sm) {
+            width: 60%;
+        }
+    }
+
+    &__group {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        @include mq(sm) {
+            width: 40%;
+        }
+    }
+
+    &__logo {
+        height: 4vh;
+
+        @include mq(sm) {
+            height: 5vh;
+            margin-right: 8%;
+        }
+
+        img {
+            width: auto;
+            height: 100%;
+        }
+    }
+
+    &__nav {
+        display: none;
+
+        @include mq(sm) {
+            height: 15vh;
+            display: flex;
+            align-items: center;
+            width: 70%;
+        }
+    }
+
+    &__menu {
+        display: flex;
+        align-items: center;
+        width: 100%;
+
+        li {
+            position: relative;
+
+            &:first-child {
+
+                &:after {
+                    content: '';
+                    position: absolute;
+                    right: -20px;
+                    top: 40%;
+                    width: 8px;
+                    height: 8px;
+                    border-top: 2px solid $white;
+                    border-right: 2px solid $white;
+                    transform: translateY(-50%) rotate(135deg);
+                }
+            }
+
+            &:not(:last-child) {
+                margin-right: 10%;
+            }
+        }
+
+        a {
+            color: $white;
+        }
+    }
+
+    &__submenu {
+        display: none;
+    }
+
+    &__language {
+        background: transparent;
+        border: none;
+        color: $white;
+        outline: none;
+    }
+
+    &__social {
+        ul {
+            display: flex;
+        }
+
+        li {
+            margin-left: 10px;
+
+            @include mq(sm) {
+                margin-left: 2vw;
+            }
+        }
+
+        a {
+            color: $white;
+        }
+    }
+
     &__hamburguer {
         cursor: pointer;
         width: 25px;
-        height: 25px;
-        margin: auto;
-        position: absolute;
-        right: 32px;
-        top: 30px;
+        height: 21px;
+        margin-left: 20px;
+
+        @include mq(sm) {
+            display: none;
+        }
 
         span {
-            background-color: $mainColor;
+            background-color: $white;
             border-radius: 2px;
             content: '';
             display: block;

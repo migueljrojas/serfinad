@@ -2,3 +2,58 @@ extends _layouts/base
 
 block content
     main.home
+        section.home__hero
+            .home__content
+                h1.home__title Servicios Financieros, Contables y Tributarios
+                .home__button 
+                    a(href="#") Conocenos
+        section.home__interstitial
+            .home__interstitial__container
+                .home__interstitial__wrapper
+                    p.home__interstitial__text Por nuestra parte como Sefinard, les ofrecemos a nuestros clientes, los servicios de expertos profesionales en las especialidades que necesitan, donde tenemos ventajas comparativas, mediante un alto compromiso y con el mejor nivel del staff que se requiera.
+                .home__interstitial__images
+                    .home__interstitial__image.home__interstitial__image--logo
+                        img(src="/images/logo-big.png")
+                    .home__interstitial__image.home__interstitial__image--girl
+                        img(src="/images/girl.png")
+        section.home__servicios#servicios
+            h2.home__servicios__title Nuestros Servicios
+            .home__servicios__wrapper
+                .home__servicios__cell
+                    .home__servicios__group
+                        span.home__servicios__cell-number 01
+                        h3.home__servicios__cell-title Servicios Contables y Tributarios
+                        p.home__servicios__cell-text Nuestro objetivo es contar con información fidedigna y al día, para que el cliente tome buenas dicisiones.
+                        a.home__servicios__cell-button Saber más
+                .home__servicios__cell
+                    .home__servicios__group
+                        span.home__servicios__cell-number 02
+                        h3.home__servicios__cell-title Servicios Tributarios
+                        p.home__servicios__cell-text Debido a nuestra experiencia en diversas empresas, estamos preparados para prestar servicios tributarios de alto nivel...
+                        a.home__servicios__cell-button Saber más
+                .home__servicios__cell
+                    .home__servicios__group
+                        span.home__servicios__cell-number 04
+                        h3.home__servicios__cell-title Representación fiscal solo para clientes en el exterior
+                        p.home__servicios__cell-text Nuestros servicios es apoyarlo en comenzar con éxito los negocios de nuestros clientes en Chile, apoyandolos en los procesos necesarios.
+                        a.home__servicios__cell-button Saber más
+                .home__servicios__cell
+                    .home__servicios__group
+                        span.home__servicios__cell-number 03
+                        h3.home__servicios__cell-title Servicios Payroll
+                        p.home__servicios__cell-text La gestión de prrocesamiento de nóminas es una de las áreas más sensibles de una organización.
+                        a.home__servicios__cell-button Saber más
+        section.home__contacto#contacto
+            .home__servicios__title Contactenos
+            .home__contacto__wrapper
+                .home__contacto__column.home__contacto__column--left
+                    .home__contacto__map
+                        iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1040.9271362684638!2d-70.60159164845057!3d-33.41574610858649!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662cf41da04ec63%3A0x30acfbe0c14c7a9!2sSan+Sebasti%C3%A1n+2807%2C+Las+Condes%2C+Regi%C3%B3n+Metropolitana%2C+Chile!5e0!3m2!1ses-419!2sar!4v1548266916661" width="600" height="450" frameborder="0" style="border:0" allowfullscreen)
+                    h3.home__contacto__title Dónde encontrarnos
+                    p.home__contacto__text San Sebastian N° 2807 Oficina N° 817
+                    p.home__contacto__text Las Condes, Santiago, Chile
+                .home__contacto__column.home__contacto__column--right
+                    form.home__contacto__form
+                        input.home__contacto__input(placeholder="Input")
+                        textarea.home__contacto__input.home__contacto__input--textarea(placeholder="Input")
+                        button.home__contacto__button Enviar

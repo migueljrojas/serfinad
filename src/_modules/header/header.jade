@@ -1,2 +1,37 @@
 header.header
+    .header__container
+        .header__wrapper
+            .header__logo
+                img(src="/images/logo.png")
+            .header__nav
+                ul.header__menu
+                    each item in site.data.header
+                        li
+                            a(href=item.url)=item.name
+                            if item.submenu
+                                ul.header__submenu
+                                    each link in item.submenu   
+                                        li
+                                            a(href=link.url)=link.name
+        .header__group
+            select.header__language
+                option
+                    a(href="#") Esp
+                option
+                    a(href="#") Eng
+            .header__social
+                ul
+                    li
+                        a(href="#")
+                            i.fa.fa-facebook
+                    li
+                        a(href="#")
+                            i.fa.fa-instagram
+                    li
+                        a(href="#")
+                            i.fa.fa-linkedin
+            .header__hamburguer
+                span
+                span
+                span
     
