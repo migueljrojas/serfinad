@@ -2,23 +2,22 @@ header.header
     .header__container
         .header__wrapper
             .header__logo
-                img(src="/images/logo.png")
+                a(href="/")
+                    img(src="/images/logo.png")
             .header__nav
                 ul.header__menu
                     each item in site.data.header
-                        li
+                        li(data-content=item.data)
                             a(href=item.url)=item.name
                             if item.submenu
                                 ul.header__submenu
                                     each link in item.submenu   
-                                        li
+                                        li(data-content=link.data)
                                             a(href=link.url)=link.name
         .header__group
             select.header__language
-                option
-                    a(href="#") Esp
-                option
-                    a(href="#") Eng
+                option Esp
+                option Eng
             .header__social
                 ul
                     li

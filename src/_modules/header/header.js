@@ -5,6 +5,12 @@ var Header = function() {
     var header = $('.header');
     var body = $('body');
     var menuOpen = $('.header__hamburguer');
+    var submenu = $('.header__submenu');
+    var submenuOpen = $('[data-content="submenu"]');
+
+    submenuOpen.on('click', function(){
+        submenu.addClass('-open');
+    });
 
     menuOpen.on('click', function(){
         header.toggleClass('-open');

@@ -81,7 +81,7 @@
         &__text {
             line-height: 2;
             margin: 0;
-            font-size: 12px;
+            font-size: 14px;
 
             @include mq(sm) {
                 font-size: 2.5vmin;
@@ -312,7 +312,6 @@
         &__column {
 
             @include mq(sm) {
-                height: 42vh;
                 width: 48.5%;
             }
 
