@@ -1,8 +1,29 @@
 extends ../_layouts/base
 
+include ../_modules/contacto/contacto
+
 block config
   //- Correct base url pathing for this page
   - var baseUrl = '../'
 
 block content
-  p representacion-fiscal page
+    main.representacion-fiscal 
+        section.servicios-payroll__hero
+            .servicios-payroll__image
+                img(src="/images/hero-servicio-04.jpg")
+            .servicios-payroll__content
+                span.servicios-contables__index 04
+                h1.servicios-payroll__title Constitución y Modificaciones de Estatutos
+        section.servicios-payroll__interstitial.servicios-payroll__interstitial--servicios
+            .container
+                .row
+                    .col-xs-24.col-sm-18.col-md-12.col-sm-offset-3.col-md-offset-6
+                        p.servicios-payroll__interstitial__text.servicios-payroll__interstitial__text--servicios Nuestros servicios es apoyarlo en comenzar con éxito los negocios de nuestros clientes en Chile, apoyandolos en los procesos necesarios
+        section.servicios-payroll__service-description
+            .container
+                .row
+                    .col-xs-24.col-sm-18.col-md-12.col-sm-offset-3.col-md-offset-6
+                        .servicios-payroll__service-description__group
+                            p.servicios-contables__service-description__text Apoyamos a nuestros clientes en definir las diferentes estructuras legales de acuerdo a sus requerimientos, analizando los aspectos legales en conjunto con abogados.
+                            p.servicios-contables__service-description__text Apoyamos a empresas extranjeras que desean desarrollar actividades en Chile, en su etapa inicial con una representacion legal con el proposito de cumplir la exigencia del SII, de que el representante legal debe tener residencia en Chile.
+        +contacto
