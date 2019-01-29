@@ -1,10 +1,24 @@
-.home {
+.home,
+.servicios-contables,
+.servicios-tributarios,
+.servicios-payroll {
 
     &__hero {
-        background: url("/images/hero.jpg") no-repeat center center / cover;
         height: 100vh;
         position: relative;
         overflow: hidden;
+    }
+
+    &__image {
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+
+        img {
+            height: auto;
+            min-height: 100%;
+            width: 100%;
+        }
     }
 
     &__content {
@@ -12,6 +26,22 @@
         top: 50%;
         left: 50%;
         transform: translate3d(-50%, -50%, 0);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    &__index {
+        font-family: $titleFont;
+        color: $indigo;
+        font-weight: 700;
+        text-shadow: -1px 0 $white, 0 1px $white, 1px 0 $white, 0 -1px $white;
+        font-size: 32px;
+
+        @include mq(sm) {
+            font-size: 5vw;
+        }
     }
 
     &__title {
@@ -57,6 +87,14 @@
     &__interstitial {
         background: $lightGray;
 
+        &--servicios {
+            padding: 50px 30px;
+
+            @include mq(sm) {
+                padding: 5vw 0;
+            }
+        }
+
         &__container {
             display: flex;
             flex-direction: column;
@@ -74,7 +112,6 @@
             @include mq(sm) {
                 padding: 5vw 0;
                 width: 50%;
-
             }
         }
 
@@ -85,6 +122,10 @@
 
             @include mq(sm) {
                 font-size: 2.5vmin;
+            }
+
+            &--servicios {
+                text-align: center;
             }
         }
 
@@ -293,116 +334,34 @@
         }
     }
 
-    &__contacto {
-        margin-bottom: 10vh;
+    &__service-description {
+        padding: 10vh 0;
 
-        &__wrapper {
-            width: 80%;
-            margin-left: auto;
-            margin-right: auto;
-            display: flex;
-            flex-direction: column;
-
-            @include mq(sm) {
-                justify-content: space-between;
-                flex-direction: row;
-            }
-        }
-
-        &__column {
-
-            @include mq(sm) {
-                width: 48.5%;
-            }
-
-            &--left {
-                margin-bottom: 20px;
+        &__group {
+            &:not(:last-child) {
+                margin-bottom: 40px;
 
                 @include mq(sm) {
-                    margin-bottom: 0;
+                    margin-bottom: 4vw;
                 }
             }
         }
 
-        &__map {
-            width: 100%;
-            position: relative;
-            overflow: hidden;
+        &__text,
+        &__subtitle,
+        &__item {
             margin-bottom: 20px;
-            height: 40vh;
+            list-style: disc;
+            list-style-position: inside;
 
             @include mq(sm) {
-                height: 73%;
-                margin-bottom: 1.5vw;
-            }
-
-            iframe {
-                position: absolute;
-                top: 0;
-                left: 0;
-                right: 0;
-                bottom: 0;
+                margin-bottom: 2vw;
             }
         }
 
-        &__title {
-            color: $indigo;
+        &__subtitle {
+            font-family: $titleFont;
             font-weight: 700;
-            margin-bottom: 15px;
-            font-size: 16px;
-
-            @include mq(sm) {
-                font-size: 1.3vw;
-                margin-bottom: 1.5vw;
-            }
-        }
-
-        &__text {
-            margin: 0;
-            color: $indigo;
-            font-size: 14px;
-        }
-
-        &__form {
-            display: flex;
-            flex-direction: column;
-        }
-
-        &__input {
-            color: $indigo + #333;
-            background: $indigo + #999;
-            border: none;
-            outline: none;
-            margin-bottom: 20px;
-            padding: 15px 20px;
-
-            @include mq(sm) {
-                padding: 1.5vw 2vw;
-                margin-bottom: 1.5vw;
-            }
-
-            &--textarea {
-                height: 25vh;
-            }
-        }
-
-        &__button {
-            background: $indigo;
-            color: $white;
-            border: none;
-            border-radius: 50px;
-            width: 50%;
-            padding: 10px 0;
-            margin-left: auto;
-            margin-right: auto;
-
-            @include mq(sm) {
-                margin-left: 0;
-                margin-right: 0;
-                padding: 1vw 0;
-                width: 25%;
-
-            }
         }
     }
 }

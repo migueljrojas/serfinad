@@ -1,0 +1,36 @@
+extends ../_layouts/base
+
+include ../_modules/contacto/contacto
+
+block config
+  //- Correct base url pathing for this page
+  - var baseUrl = '../'
+
+block content
+    main.servicios-payroll
+        section.servicios-payroll__hero
+            .servicios-payroll__content
+                span.servicios-contables__index 03
+                h1.servicios-payroll__title Servicios Payroll
+        section.servicios-payroll__interstitial.servicios-payroll__interstitial--servicios
+            .container
+                .row
+                    .col-xs-24.col-sm-18.col-md-12.col-sm-offset-3.col-md-offset-6
+                        p.servicios-payroll__interstitial__text.servicios-payroll__interstitial__text--servicios La gestión de procesamiento de nóminas es una de las áreas más sensibles en una organización.
+        section.servicios-payroll__service-description
+            .container
+                .row
+                    .col-xs-24.col-sm-18.col-md-12.col-sm-offset-3.col-md-offset-6
+                        .servicios-payroll__service-description__group
+                            p.servicios-contables__service-description__text Por medio de nuestros especialistas en remuneraciones hemos desarrollado los procesos de cálculo y administracion de personal con  Software de remuneraciones de un gran nivel, para cumplir con las normas legales
+                        .servicios-payroll__service-description__group
+                            h3.servicios-payroll__service-description__subtitle Las funciones a realizar son:
+                            ul.servicios-payroll__service-description__list
+                                li.servicios-payroll__service-description__item Cálculo de liquidaciones de sueldo considerando ingresos y descuentos legales y contractuales
+                                li.servicios-payroll__service-description__item Envío de liquidaciones de remuneraciones a las empresas para que procedan a cancelar
+                                li.servicios-payroll__service-description__item Envio de cotizaciones previsionales para cancelar por Previred
+                                li.servicios-payroll__service-description__item Emisión del libro de remuneraciones legal mensual
+                                li.servicios-payroll__service-description__item Supervision y Cálculo de finiquitos
+                                li.servicios-payroll__service-description__item Preparación y emisión de certificados de remuneraciones
+                                li.servicios-payroll__service-description__item Preparación y envío de declaraciones juradas al Servicio de Impuestos Internos
+        +contacto

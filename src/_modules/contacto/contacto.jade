@@ -1,0 +1,16 @@
+mixin contacto(spec)
+    section.contacto#contacto
+        .contacto__title Contáctenos
+        .contacto__wrapper
+            .contacto__column.contacto__column--left
+                .contacto__map
+                    iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1040.9271362684638!2d-70.60159164845057!3d-33.41574610858649!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662cf41da04ec63%3A0x30acfbe0c14c7a9!2sSan+Sebasti%C3%A1n+2807%2C+Las+Condes%2C+Regi%C3%B3n+Metropolitana%2C+Chile!5e0!3m2!1ses-419!2sar!4v1548266916661" width="600" height="450" frameborder="0" style="border:0" allowfullscreen)
+                h3.contacto__subtitle Dónde encontrarnos
+                p.contacto__text San Sebastian N° 2807 Oficina N° 817
+                p.contacto__text Las Condes, Santiago, Chile
+            .contacto__column.contacto__column--right
+                form.contacto__form
+                    input.contacto__input(type="text" placeholder="Nombre y Apellido")
+                    input.contacto__input(type="email" placeholder="Email")
+                    textarea.contacto__input.contacto__input--textarea(placeholder="Input")
+                    button.contacto__button Enviar

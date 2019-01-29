@@ -1,0 +1,143 @@
+.contacto {
+    margin-bottom: 10vh;
+
+    &__title {
+        color: $mainColor;
+        font-family: $titleFont;
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 5vh;
+        padding-bottom: 5vh;
+        position: relative;
+        margin-top: 0;
+        font-size: 32px;
+
+        @include mq(sm) {
+            font-size: 4vw;
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            height: 3px;
+            background: $midGray;
+            width: 20%;
+
+            @include mq(sm) {
+                width: 8%;
+            }
+        }
+    }
+
+    &__wrapper {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        flex-direction: column;
+
+        @include mq(sm) {
+            justify-content: space-between;
+            flex-direction: row;
+        }
+    }
+
+    &__column {
+
+        @include mq(sm) {
+            width: 48.5%;
+        }
+
+        &--left {
+            margin-bottom: 20px;
+
+            @include mq(sm) {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &__map {
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+        margin-bottom: 20px;
+        height: 40vh;
+
+        @include mq(sm) {
+            height: 73%;
+            margin-bottom: 1.5vw;
+        }
+
+        iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+    }
+
+    &__subtitle {
+        color: $indigo;
+        font-weight: 700;
+        margin-bottom: 15px;
+        font-size: 16px;
+
+        @include mq(sm) {
+            font-size: 1.3vw;
+            margin-bottom: 1.5vw;
+        }
+    }
+
+    &__text {
+        margin: 0;
+        color: $indigo;
+        font-size: 14px;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__input {
+        color: $indigo + #333;
+        background: $indigo + #999;
+        border: none;
+        outline: none;
+        margin-bottom: 20px;
+        padding: 15px 20px;
+
+        @include mq(sm) {
+            padding: 1.5vw 2vw;
+            margin-bottom: 1.5vw;
+        }
+
+        &--textarea {
+            height: 25vh;
+        }
+    }
+
+    &__button {
+        background: $indigo;
+        color: $white;
+        border: none;
+        border-radius: 50px;
+        width: 50%;
+        padding: 10px 0;
+        margin-left: auto;
+        margin-right: auto;
+
+        @include mq(sm) {
+            margin-left: 0;
+            margin-right: 0;
+            padding: 1vw 0;
+            width: 25%;
+
+        }
+    }
+}

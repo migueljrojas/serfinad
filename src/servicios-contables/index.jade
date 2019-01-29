@@ -1,0 +1,42 @@
+extends ../_layouts/base
+
+include ../_modules/contacto/contacto
+
+block config
+  //- Correct base url pathing for this page
+  - var baseUrl = '../'
+
+block content
+    main.servicios-contables
+        section.servicios-contables__hero
+            .servicios-contables__image
+                img(src="/images/hero.jpg")
+            .servicios-contables__content
+                span.servicios-contables__index 01
+                h1.servicios-contables__title Servicios Contables y Tributarios
+        section.servicios-contables__interstitial.servicios-contables__interstitial--servicios
+            .container
+                .row
+                    .col-xs-24.col-sm-18.col-md-12.col-sm-offset-3.col-md-offset-6
+                        p.servicios-contables__interstitial__text.servicios-contables__interstitial__text--servicios Nuestro objetivo es contar con información fidedigna y al día, para que el cliente tome buenas decisiones.
+        section.servicios-contables__service-description
+            .container
+                .row
+                    .col-xs-24.col-sm-18.col-md-12.col-sm-offset-3.col-md-offset-6
+                        .servicios-contables__service-description__group
+                            p.servicios-contables__service-description__text Nuestra filosofia de trabajo es atender en forma integra las solicitudes y necesidades de los clientes.
+                            p.servicios-contables__service-description__text Para cumplir con el objetivo, el nivel staff profesional esta en permanente supervision de los trabajos a realizar.
+                            p.servicios-contables__service-description__text Ofrecemos una asesoria de alto nivel en las areas contables, laboral y tributario, tambien en los procesos de definir la estructura contable de acuerdo a las necesidades del Cliente.
+                        .servicios-contables__service-description__group
+                            h3.servicios-contables__service-description__subtitle Trabajos a Realizar
+                            ul.servicios-contables__service-description__list
+                                li.servicios-contables__service-description__item Preparacion de la Contabilidad Mensual.
+                                li.servicios-contables__service-description__item Elaboracion de informes de contabilidad mensual, trimestral o anual.
+                        .servicios-contables__service-description__group
+                            h3.servicios-contables__service-description__subtitle Los Beneficios del Servicio Contable son:
+                            ul.servicios-contables__service-description__list
+                                li.servicios-contables__service-description__item Que el cliente se concentre en su propia actividad del negocio.
+                                li.servicios-contables__service-description__item Obtenga una reduccion y simplificacion de la estructura contable de la organización, produciendo un menor costo fijo de tener una estructura contable interno, asi como pago de otros beneficios al personal, como gratificaciones, bonos, aguinaldos, etc.
+                                li.servicios-contables__service-description__item Minimizar los riesgos Tributarios, por medio de una asesoria tributaria con gran experiencia en el mercado.
+                                li.servicios-contables__service-description__item Generar informacion contable, financiera y gerencial precisa y oportuna.
+        +contacto

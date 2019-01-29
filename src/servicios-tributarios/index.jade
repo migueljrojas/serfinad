@@ -1,0 +1,34 @@
+extends ../_layouts/base
+
+include ../_modules/contacto/contacto
+
+block config
+  //- Correct base url pathing for this page
+  - var baseUrl = '../'
+
+block content
+    main.servicios-tributarios
+        section.servicios-tributarios__hero
+            .servicios-tributarios__content
+                span.servicios-contables__index 02
+                h1.servicios-tributarios__title Servicios Tributarios
+        section.servicios-tributarios__interstitial.servicios-tributarios__interstitial--servicios
+            .container
+                .row
+                    .col-xs-24.col-sm-18.col-md-12.col-sm-offset-3.col-md-offset-6
+                        p.servicios-tributarios__interstitial__text.servicios-tributarios__interstitial__text--servicios Debido a nuestra experiencia en diversas empresas, estamos preparados para prestar servicios tributarios de alto nivel a todo tipo de empresas, independiente del rubro o tamaño de las empresas, sean estas Nacionales o Extranjeras.
+        section.servicios-tributarios__service-description
+            .container
+                .row
+                    .col-xs-24.col-sm-18.col-md-12.col-sm-offset-3.col-md-offset-6
+                        .servicios-tributarios__service-description__group
+                            h3.servicios-tributarios__service-description__subtitle Nuestros servicios en legislación tributaria son:
+                            ul.servicios-tributarios__service-description__list
+                                li.servicios-tributarios__service-description__item Asesoría tributaria temporales o permanentes
+                                li.servicios-tributarios__service-description__item Preparación y presentación de la declaración Anual de Impuesto a la Renta
+                                li.servicios-tributarios__service-description__item Preparacion y presentacion de todas las Declaraciones Juradas que se solicitan
+                                li.servicios-tributarios__service-description__item Solicitudes por devolución de impuestos
+                                li.servicios-tributarios__service-description__item Revision y diagnóstico tributario preventivo
+                                li.servicios-tributarios__service-description__item Cuantificación de efectos tributarios en procesos de reorganización
+                                li.servicios-tributarios__service-description__item Auditorías tributarias
+        +contacto

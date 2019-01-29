@@ -6,22 +6,22 @@
         "submenu": [
             {
                 "name":"Servicios Contables y Tributarios",
-                "url":"#servicios",
+                "url":"/servicios-contables",
                 "data":"submenu-link"
             },
             {
                 "name":"Servicios Tributarios",
-                "url":"#servicios",
+                "url":"/servicios-tributarios",
                 "data":"submenu-link"
             },
             {
                 "name":"Servicios Payroll",
-                "url":"#servicios",
+                "url":"/servicios-payroll",
                 "data":"submenu-link"
             },
             {
                 "name":"Representación fiscal solo para clientes del exterior",
-                "url":"#servicios",
+                "url":"/representacion-fiscal",
                 "data":"submenu-link"
             }
         ]
